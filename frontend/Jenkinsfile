@@ -2,14 +2,14 @@ def changed = false
 for (changeLog in currentBuild.changeSets) {
     for (entry in changeLog.items) {
         for (file in entry.affectedFiles) {
-            if (file.path.startsWith("backend/")) {
+            if (file.path.startsWith("frontend/")) {
                 changed = true
             }
         }
     }
 }
 if (!changed) {
-    echo "No changes in backend/, skipping entire pipeline execution."
+    echo "No changes in frontend/, skipping entire pipeline execution."
     currentBuild.result = 'NOT_BUILT'
     return
 }
