@@ -37,7 +37,7 @@ pipeline {
             steps {
                 echo "Beginning sonarqube analysis.."
                 dir('backend') {
-                    withSonarQubeEnv('sonar-server') { // Use withSonarQubeEnv wrapper
+                    withSonarQubeEnv('sonar-server') { 
                         sh '''
                         $SCANNER_HOME/bin/sonar-scanner \
                         -Dsonar.projectName=backend \
