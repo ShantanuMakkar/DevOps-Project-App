@@ -20,6 +20,29 @@ pipeline {
     }
 
     stages {
+        stage('Check for relevant changes') {
+            steps {
+                script {
+                    def changed = false
+                    for (changeLog in currentBuild.changeSets) {
+                        for (entry in changeLog.items) {
+                            for (file in entry.affectedFiles) {
+                                if (file.path.startsWith("frontend/")) {
+                                    changed = true
+                                }
+                            }
+                        }
+                    }
+
+                    if (!changed) {
+                        echo "No changes in frontend/ — skipping pipeline."
+                        currentBuild.result = 'NOT_BUILT'
+                        error("Aborting: no relevant changes detected.")
+                    }
+                }
+            }
+        }
+
         stage('Check for Changes in frontend/') {
             when {
                 changeset "**/frontend/**"
