@@ -1,3 +1,19 @@
+def changed = false
+for (changeLog in currentBuild.changeSets) {
+    for (entry in changeLog.items) {
+        for (file in entry.affectedFiles) {
+            if (file.path.startsWith("backend/")) {
+                changed = true
+            }
+        }
+    }
+}
+if (!changed) {
+    echo "No changes in backend/, skipping entire pipeline execution."
+    currentBuild.result = 'NOT_BUILT'
+    return
+}
+
 pipeline {
     agent any 
 
