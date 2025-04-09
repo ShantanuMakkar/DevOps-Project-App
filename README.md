@@ -1,4 +1,4 @@
-# 🚀 Advanced End-to-End DevSecOps Kubernetes Project    
+# 🚀 Advanced End-to-End DevSecOps Kubernetes Project     
 
 ## 🔍 Project Overview  
 This project demonstrates a **secure, scalable, and fully automated** DevSecOps pipeline for deploying a three-tier **MERN application** on **AWS EKS**. It integrates **Infrastructure as Code (IaC), CI/CD automation, GitOps, security scanning, and monitoring**, ensuring a production-ready cloud-native deployment.🛳️ 
