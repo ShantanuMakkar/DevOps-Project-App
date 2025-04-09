@@ -79,7 +79,7 @@ pipeline {
         
         stage('Docker Image Build') {
             steps {
-                echo "Beginning docker image build.."
+                echo "Beginning docker image build."
                 script {
                     dir('frontend') {
                         sh 'docker system prune -f'
