@@ -19,6 +19,3 @@ This project is a **blueprint for building secure, automated, and scalable cloud
 - **Security**: 🔒 SonarQube, 🛡️ OWASP Dependency-Check, 🕵️ Trivy  
 - **Monitoring**: 📊 Prometheus, 📈 Grafana  
 - **Cloud Platform**: ☁️ AWS EKS
-
-## 📖 Read the Full Blog  
-For a detailed walkthrough of this project, check out my blog post: [**Ultimate DevSecOps Project: End-to-End Kubernetes Three-Tier Deployment on AWS EKS with ArgoCD, Prometheus, Grafana, and Jenkins**](https://itspraduman.hashnode.dev/ultimate-devsecops-project-end-to-end-kubernetes-three-tier-deployment-on-aws-eks-with-argocd-prometheus-grafana-and-jenkins)   
